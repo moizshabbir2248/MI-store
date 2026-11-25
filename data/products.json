@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Royal Chronograph Black",
+    "category": "mens-watches",
+    "price": 8500,
+    "originalPrice": 12000,
+    "badge": "Sale",
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80",
+    "section": ["best-sellers", "new-arrivals"],
+    "description": "Premium stainless steel chronograph with black dial."
+  },
+  {
+    "id": 2,
+    "title": "Elegance Rose Gold",
+    "category": "ladies-watches",
+    "price": 7200,
+    "originalPrice": 10500,
+    "badge": "Sale",
+    "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80",
+    "section": ["best-sellers"],
+    "description": "Elegant rose gold watch for a refined look."
+  },
+  {
+    "id": 3,
+    "title": "Aviator Classic Sunglasses",
+    "category": "glasses",
+    "price": 3500,
+    "originalPrice": 5000,
+    "badge": "Sale",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=800&q=80",
+    "section": ["best-sellers", "new-arrivals"],
+    "description": "Timeless aviator sunglasses with UV protection."
+  },
+  {
+    "id": 4,
+    "title": "Midnight Luxe Edition",
+    "category": "mens-watches",
+    "price": 15500,
+    "originalPrice": 22000,
+    "badge": "Sale",
+    "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80",
+    "section": ["best-sellers"],
+    "description": "Luxury edition watch with midnight black finish."
+  },
+  {
+    "id": 5,
+    "title": "Pearl Dial Ladies Watch",
+    "category": "ladies-watches",
+    "price": 6800,
+    "originalPrice": 9500,
+    "badge": "Sale",
+    "image": "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=800&q=80",
+    "section": ["new-arrivals"],
+    "description": "Delicate pearl dial with premium strap."
+  },
+  {
+    "id": 6,
+    "title": "Urban Square Sunglasses",
+    "category": "glasses",
+    "price": 2900,
+    "originalPrice": 4200,
+    "badge": "Sale",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80",
+    "section": ["new-arrivals"],
+    "description": "Modern square frame sunglasses for everyday style."
+  },
+  {
+    "id": 7,
+    "title": "Gold Prestige Automatic",
+    "category": "mens-watches",
+    "price": 18500,
+    "originalPrice": 25000,
+    "badge": "Sale",
+    "image": "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=800&q=80",
+    "section": ["new-arrivals", "best-sellers"],
+    "description": "Automatic gold prestige watch with premium craftsmanship."
+  },
+  {
+    "id": 8,
+    "title": "Crystal Bloom Ladies Watch",
+    "category": "ladies-watches",
+    "price": 7900,
+    "originalPrice": 11000,
+    "badge": "Sale",
+    "image": "https://images.unsplash.com/photo-1509941943102-10c232535736?auto=format&fit=crop&w=800&q=80",
+    "section": ["best-sellers"],
+    "description": "Crystal-accented ladies watch with elegant bloom design."
+  }
+]

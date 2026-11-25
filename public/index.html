@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MI STORE | Watches & Eyewear</title>
+  <meta name="description" content="MI STORE - Premium watches and eyewear in Pakistan. 500 dc advance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="announcement-bar">500 dc advance</div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#" class="brand" data-nav="home" aria-label="MI STORE Home">
+        <!-- PASTE YOUR LOGO IMAGE URL OR LOCAL PATH IN SRC BELOW -->
+        <img id="store-logo" src="mi logo.jpeg" alt="MI STORE Logo" onerror="this.style.display='none'" />
+        <span class="brand-text">
+          <span class="brand-mark">MI</span>
+          <span class="brand-name">STORE</span>
+        </span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#" data-nav="home" class="nav-link active">Home</a>
+        <a href="#" data-nav="mens-watches" class="nav-link">Mens Watches</a>
+        <a href="#" data-nav="ladies-watches" class="nav-link">Ladies Watches</a>
+        <a href="#" data-nav="glasses" class="nav-link">Glasses</a>
+        <a href="#" data-nav="track-order" class="nav-link">Track Order</a>
+      </div>
+
+      <div class="nav-actions">
+        <div class="search-wrap">
+          <input type="search" id="searchInput" placeholder="Search products..." aria-label="Search products">
+          <button id="searchBtn" class="icon-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </div>
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-13z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M6 6L5 3H2"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-search container">
+      <input type="search" id="mobileSearchInput" placeholder="Search watches, glasses..." aria-label="Search products mobile">
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="hero" id="homeSection">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide active" style="--bg:url('https://images.unsplash.com/photo-1511370235399-1802cae1d32f?auto=format&fit=crop&w=1600&q=80')">
+          <div class="hero-overlay"></div>
+          <div class="hero-content container">
+            <p class="eyebrow">New Season Collection</p>
+            <h1>Timeless Watches.<br>Bold Eyewear.</h1>
+            <p class="hero-sub">Discover premium style crafted for everyday elegance. 500 dc advance across Pakistan.</p>
+            <a href="#bestSellers" class="btn btn-primary" id="heroShopBtn">Shop Now</a>
+          </div>
+        </div>
+        <div class="hero-slide" style="--bg:url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1600&q=80')">
+          <div class="hero-overlay"></div>
+          <div class="hero-content container">
+            <p class="eyebrow">Luxury For Less</p>
+            <h1>Elevate Your<br>Everyday Look</h1>
+            <p class="hero-sub">Exclusive deals on mens & ladies watches .</p>
+            <a href="#newArrivals" class="btn btn-primary hero-shop-alt">Explore New Arrivals</a>
+          </div>
+        </div>
+        <div class="hero-slide" style="--bg:url('https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1600&q=80')">
+          <div class="hero-overlay"></div>
+          <div class="hero-content container">
+            <p class="eyebrow">Signature Eyewear</p>
+            <h1>See The World<br>In Style</h1>
+            <p class="hero-sub">Premium sunglasses designed for comfort, clarity, and confidence.</p>
+            <a href="#" class="btn btn-primary" data-nav="glasses">Shop Glasses</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dots" id="heroDots" aria-label="Hero slider navigation"></div>
+    </section>
+
+    <section class="section categories-section">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Shop By Category</p>
+          <h2>Find Your Perfect Match</h2>
+        </div>
+        <div class="category-circles">
+          <button class="category-card" data-category="mens-watches">
+            <span class="circle-img"><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=300&q=80" alt="Mens Watches"></span>
+            <span class="category-label">Mens Watches</span>
+          </button>
+          <button class="category-card" data-category="ladies-watches">
+            <span class="circle-img"><img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=300&q=80" alt="Ladies Watches"></span>
+            <span class="category-label">Ladies Watches</span>
+          </button>
+          <button class="category-card" data-category="glasses">
+            <span class="circle-img"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=300&q=80" alt="Sunglasses"></span>
+            <span class="category-label">Sunglasses</span>
+          </button>
+          <button class="category-card" data-category="luxury">
+            <span class="circle-img"><img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=300&q=80" alt="Luxury Editions"></span>
+            <span class="category-label">Luxury Editions</span>
+          </button>
+          <button class="category-card" data-category="best-sellers">
+            <span class="circle-img"><img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=300&q=80" alt="Best Sellers"></span>
+            <span class="category-label">Best Sellers</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="bestSellers">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Curated For You</p>
+            <h2>Best Sellers</h2>
+          </div>
+        </div>
+        <div class="product-grid" id="bestSellerGrid"></div>
+      </div>
+    </section>
+
+    <section class="section products-section alt-bg" id="newArrivals">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Just Dropped</p>
+            <h2>New Arrivals</h2>
+          </div>
+        </div>
+        <div class="product-grid" id="newArrivalsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section catalog-section hidden" id="catalogSection">
+      <div class="container">
+        <div class="section-head catalog-head">
+          <div>
+            <p class="eyebrow" id="catalogEyebrow">Collection</p>
+            <h2 id="catalogTitle">All Products</h2>
+          </div>
+          <div class="catalog-controls">
+            <select id="sortSelect" aria-label="Sort products">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+        </div>
+        <div class="product-grid" id="catalogGrid"></div>
+        <div class="empty-state hidden" id="catalogEmpty">No products found. Try another search or category.</div>
+      </div>
+    </section>
+
+    <section class="section track-section hidden" id="trackSection">
+      <div class="container track-layout">
+        <div class="track-card">
+          <p class="eyebrow">Order Tracking</p>
+          <h2>Track Your Order</h2>
+          <p class="track-copy">After placing your order on WhatsApp, save your order details. For tracking assistance, contact us directly on WhatsApp.</p>
+          <a id="trackWhatsappBtn" href="#" target="_blank" rel="noopener" class="btn btn-primary">Track on WhatsApp</a>
+        </div>
+        <div class="track-info">
+          <h3>Need Help?</h3>
+          <p>For quick assistance with your order, contact us on WhatsApp.</p>
+          <a id="trackHelpBtn" href="#" target="_blank" rel="noopener" class="btn btn-dark">Chat on WhatsApp</a>
+          <div class="trust-list">
+            <div><span>âœ“</span> 500 dc advance</div>
+            <div><span>âœ“</span> </div>
+            <div><span>âœ“</span> Quality Checked Products</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <!-- PASTE YOUR LOGO IMAGE URL OR LOCAL PATH IN SRC BELOW -->
+          <img id="footer-logo" src="" alt="MI STORE Logo" onerror="this.style.display='none'" />
+          <span class="brand-mark">MI</span> <span class="brand-name">STORE</span>
+        </div>
+        <p>Premium watches and eyewear for modern Pakistan. Style, quality, and confidence in every piece.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#" data-nav="home">Home</a>
+        <a href="#" data-nav="mens-watches">Mens Watches</a>
+        <a href="#" data-nav="ladies-watches">Ladies Watches</a>
+        <a href="#" data-nav="glasses">Glasses</a>
+      </div>
+      <div>
+        <h4>Customer Care</h4>
+        <a href="#" data-nav="track-order">Track Order</a>
+        <a id="footerWhatsappLink" href="#" target="_blank" rel="noopener">WhatsApp Support</a>
+        <!-- Admin panel: /admin -->
+        <p class="footer-note">500 dc advance</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Â© 2026 MI STORE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="icon-btn close-cart" id="closeCartBtn" aria-label="Close cart">âœ•</button>
+    </div>
+    <div class="cart-body" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row"><span>Subtotal</span><strong id="cartSubtotal">PKR 0</strong></div>
+      <p class="cart-note">500 dc advance across Pakistan.</p>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="modal-overlay" id="checkoutOverlay"></div>
+  <div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-head">
+      <h3>Checkout via WhatsApp</h3>
+      <button class="icon-btn" id="closeCheckoutBtn" aria-label="Close checkout">âœ•</button>
+    </div>
+    <div class="modal-body">
+      <div id="orderConfirmBanner" class="order-confirm-banner hidden"></div>
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <div class="form-grid">
+          <label>Customer Full Name
+            <input type="text" name="name" id="custName" required>
+            <span class="field-error" data-error-for="name"></span>
+          </label>
+          <label>Mobile / WhatsApp Number
+            <input type="tel" name="phone" id="custPhone" required placeholder="03XX-XXXXXXX">
+            <span class="field-error" data-error-for="phone"></span>
+          </label>
+        </div>
+        <label>City
+          <input type="text" name="city" id="custCity" required>
+          <span class="field-error" data-error-for="city"></span>
+        </label>
+        <label>Complete Delivery Address
+          <textarea name="address" id="custAddress" rows="3" required placeholder="House, street, area"></textarea>
+          <span class="field-error" data-error-for="address"></span>
+        </label>
+        <label>Optional Order Note (color/variant/instructions)
+          <input type="text" name="note" id="custNote" placeholder="Any delivery instructions">
+        </label>
+        <div class="checkout-summary" id="checkoutSummary"></div>
+        <button type="submit" class="btn btn-primary btn-block" id="placeOrderBtn">Place Order on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay admin-overlay" id="adminOverlay"></div>
+  <div class="checkout-modal admin-modal" id="adminModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-head">
+      <h3>Admin Panel</h3>
+      <button class="icon-btn" id="closeAdminBtn" aria-label="Close admin">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div id="adminAuth" class="admin-auth">
+        <p class="admin-note">Enter PIN to manage products. <small>(Client-side UI protection only; not server authentication.)</small></p>
+        <div class="admin-pin-row">
+          <input type="password" id="adminPinInput" placeholder="Admin PIN" aria-label="Admin PIN">
+          <button class="btn btn-primary" id="adminUnlockBtn" type="button">Unlock</button>
+        </div>
+        <p id="adminAuthMsg" class="field-error"></p>
+      </div>
+
+      <div id="adminPanel" class="admin-panel hidden">
+        <div class="admin-toolbar">
+          <button class="btn btn-outline btn-sm" id="adminResetBtn" type="button">Reset to Default Products</button>
+          <button class="btn btn-dark btn-sm" id="adminExportBtn" type="button">Copy / Download Products JSON</button>
+        </div>
+
+        <div class="admin-list-section">
+          <h4>Products</h4>
+          <div id="adminProductList"></div>
+        </div>
+
+        <form id="adminProductForm" class="checkout-form admin-form" novalidate>
+          <h4 id="adminFormTitle">Add Product</h4>
+          <input type="hidden" name="id">
+          <div class="form-grid">
+            <label>Title
+              <input type="text" name="title" id="adminProductTitle" autocomplete="off" placeholder="Product title">
+            </label>
+            <label>Category
+              <select name="category" id="adminCategorySelect">
+                <option value="mens-watches">Mens Watches</option>
+                <option value="ladies-watches">Ladies Watches</option>
+                <option value="glasses">Glasses</option>
+                <option value="__custom__">Custom...</option>
+              </select>
+              <input type="text" name="categoryCustom" id="adminCategoryCustom" class="hidden" placeholder="Custom category slug/name">
+            </label>
+          </div>
+          <div class="form-grid">
+            <label>Price (PKR)
+              <input type="number" name="price" id="adminProductPrice" min="0" step="1" inputmode="numeric" placeholder="0">
+            </label>
+            <label>Local Product Photo (upload from device)
+              <input type="file" id="productImageFile" accept="image/*">
+            </label>
+          </div>
+          <input type="hidden" name="image" id="adminImageUrl">
+          <div class="admin-image-preview-wrap">
+            <img id="adminImagePreview" class="admin-image-preview hidden" alt="Product preview">
+            <p id="adminImageStatus" class="admin-note"></p>
+          </div>
+          <div class="admin-form-actions">
+            <button type="submit" class="btn btn-primary">Save Product</button>
+            <button type="button" class="btn btn-outline hidden" id="adminCancelEditBtn">Cancel Edit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <a class="whatsapp-float" id="floatingWhatsapp" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.53c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.02-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3s.99 2.67 1.13 2.86c.14.18 1.95 2.98 4.73 4.18.66.29 1.17.46 1.57.58.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.03 27.7h-.01a11.67 11.67 0 0 1-5.95-1.63l-.43-.26-4.43 1.16 1.18-4.32-.28-.44a11.64 11.64 0 1 1 9.92 5.49zm9.86-21.56A13.94 13.94 0 0 0 16.02 2C8.28 2 1.98 8.3 1.98 16.04c0 2.47.64 4.89 1.86 7.02L1.86 30l7.12-1.87a14.02 14.02 0 0 0 7.04 1.89h.01c7.74 0 14.04-6.3 14.04-14.04 0-3.75-1.46-7.27-4.18-9.84z"/></svg>
+  </a>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
