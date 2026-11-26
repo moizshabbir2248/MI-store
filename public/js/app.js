@@ -3,7 +3,7 @@ const STORE_WHATSAPP_NUMBER = "92337214265";
 // Client-side UI protection only; not secure server auth by itself.
 const ADMIN_PIN = "M Idrees 46 14";
 const ADMIN_PRODUCTS_KEY = "mi_store_products_v1";
-const DELIVERY_CHARGES = 0;
+const DELIVERY_CHARGES = 500;
 const API_BASE = "/api";
 
 const DEFAULT_PRODUCTS = [
@@ -139,6 +139,7 @@ function cacheEls() {
   els.adminAuth = document.getElementById('adminAuth');
   els.adminPanel = document.getElementById('adminPanel');
   els.adminPinInput = document.getElementById('adminPinInput');
+  els.adminPinToggle = document.getElementById('adminPinToggle');
   els.adminUnlockBtn = document.getElementById('adminUnlockBtn');
   els.adminAuthMsg = document.getElementById('adminAuthMsg');
   els.adminProductForm = document.getElementById('adminProductForm');
@@ -200,6 +201,7 @@ function bindEvents() {
   els.adminOverlay.addEventListener('click', closeAdmin);
   els.adminUnlockBtn.addEventListener('click', unlockAdmin);
   els.adminPinInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); unlockAdmin(); } });
+  if (els.adminPinToggle) els.adminPinToggle.addEventListener('click', toggleAdminPinVisibility);
   els.adminProductForm.addEventListener('submit', handleAdminSave);
   els.adminCancelEditBtn.addEventListener('click', resetAdminForm);
   els.adminResetBtn.addEventListener('click', resetDefaultProducts);
@@ -364,7 +366,7 @@ function closeCheckout() {
 function renderCheckoutSummary() {
   const subtotal = cartSubtotal(), total = subtotal + DELIVERY_CHARGES;
   const lines = state.cart.map(i => `<div class="summary-row"><span>${escapeHtml(i.title)} x ${i.qty}</span><span>${formatPKR(Number(i.price) * Number(i.qty))}</span></div>`).join('');
-  els.checkoutSummary.innerHTML = `${lines || '<div class="summary-row"><span>No items</span><span>-</span></div>'}<div class="summary-row"><span>Delivery Charges</span><span>${DELIVERY_CHARGES === 0 ? '00 dc advance' : formatPKR(DELIVERY_CHARGES)}</span></div><div class="summary-row total"><span>Final Total</span><span>${formatPKR(total)}</span></div>`;
+  els.checkoutSummary.innerHTML = `${lines || '<div class="summary-row"><span>No items</span><span>-</span></div>'}<div class="summary-row"><span>Delivery Charges</span><span>${DELIVERY_CHARGES === 0 ? '00 dc advance' : '500 dc advance'}</span></div><div class="summary-row total"><span>Final Total</span><span>${formatPKR(total)}</span></div>`;
 }
 function clearCheckoutErrors() { els.checkoutForm.querySelectorAll('.field-error').forEach(el => el.textContent = ''); els.checkoutForm.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error')); }
 function setFieldError(name, message) { const err = els.checkoutForm.querySelector(`[data-error-for="${name}"]`); const input = els.checkoutForm.querySelector(`[name="${name}"]`); if (err) err.textContent = message; if (input) input.classList.add('input-error'); }
@@ -380,7 +382,7 @@ function validateCheckout(data) {
 function buildWhatsAppMessage(data) {
   const subtotal = cartSubtotal(), total = subtotal + DELIVERY_CHARGES;
   const items = state.cart.map((i, idx) => `${idx + 1}. ${i.title} x ${i.qty} - ${formatPKR(Number(i.price) * Number(i.qty))}`).join('\n');
-  return ['MI STORE - New Order','--------------------------',`Customer Name: ${data.name}`,`Phone: ${data.phone}`,`City: ${data.city}`,`Address: ${data.address}`,`Note: ${data.note || 'N/A'}`,'--------------------------','Order Items:',items,'--------------------------',`Delivery Charges: ${DELIVERY_CHARGES === 0 ? '00 dc advance' : formatPKR(DELIVERY_CHARGES)}`,`Final Total: ${formatPKR(total)}`,'','Please confirm my order. Thank you!'].join('\n');
+  return ['MI STORE - New Order','--------------------------',`Customer Name: ${data.name}`,`Phone: ${data.phone}`,`City: ${data.city}`,`Address: ${data.address}`,`Note: ${data.note || 'N/A'}`,'--------------------------','Order Items:',items,'--------------------------',`Delivery Charges: ${DELIVERY_CHARGES === 0 ? '00 dc advance' : '500 dc advance'}`,`Final Total: ${formatPKR(total)}`,'','Please confirm my order. Thank you!'].join('\n');
 }
 function placeOrder(e) {
   e.preventDefault();
@@ -421,6 +423,17 @@ function renderAdminGate() {
   if (state.adminUnlocked) { els.adminAuth.classList.add('hidden'); els.adminPanel.classList.remove('hidden'); renderAdminProducts(); }
   else { els.adminAuth.classList.remove('hidden'); els.adminPanel.classList.add('hidden'); els.adminAuthMsg.textContent = ''; els.adminPinInput.value = ''; }
 }
+function toggleAdminPinVisibility() {
+  const show = els.adminPinInput.type === 'password';
+  els.adminPinInput.type = show ? 'text' : 'password';
+  els.adminPinToggle.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+  els.adminPinToggle.setAttribute('aria-pressed', show ? 'true' : 'false');
+  const showIcon = els.adminPinToggle.querySelector('.eye-show');
+  const hideIcon = els.adminPinToggle.querySelector('.eye-hide');
+  if (showIcon && hideIcon) { showIcon.classList.toggle('hidden', show); hideIcon.classList.toggle('hidden', !show); }
+  els.adminPinInput.focus();
+}
+
 function unlockAdmin() {
   const pin = (els.adminPinInput.value || '').trim();
   if (pin === ADMIN_PIN) {

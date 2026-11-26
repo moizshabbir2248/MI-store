@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MI STORE | Watches & Eyewear</title>
-  <meta name="description" content="MI STORE - Premium watches and eyewear in Pakistan. 00 dc advance.">
+  <meta name="description" content="MI STORE - Premium watches and eyewear in Pakistan. 500 dc advance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <div class="announcement-bar">00 dc advance</div>
+  <div class="announcement-bar">500 dc advance</div>
 
   <header class="site-header" id="siteHeader">
     <nav class="navbar container">
@@ -61,7 +61,7 @@
           <div class="hero-content container">
             <p class="eyebrow">New Season Collection</p>
             <h1>Timeless Watches.<br>Bold Eyewear.</h1>
-            <p class="hero-sub">Discover premium style crafted for everyday elegance. 00 dc advance across Pakistan.</p>
+            <p class="hero-sub">Discover premium style crafted for everyday elegance. 500 dc advance across Pakistan.</p>
             <a href="#bestSellers" class="btn btn-primary" id="heroShopBtn">Shop Now</a>
           </div>
         </div>
@@ -176,7 +176,7 @@
           <p>For quick assistance with your order, contact us on WhatsApp.</p>
           <a id="trackHelpBtn" href="#" target="_blank" rel="noopener" class="btn btn-dark">Chat on WhatsApp</a>
           <div class="trust-list">
-            <div><span>âœ“</span> 00 dc advance</div>
+            <div><span>âœ“</span> 500 dc advance</div>
             <div><span>âœ“</span> </div>
             <div><span>âœ“</span> Quality Checked Products</div>
           </div>
@@ -207,7 +207,7 @@
         <a href="#" data-nav="track-order">Track Order</a>
         <a id="footerWhatsappLink" href="#" target="_blank" rel="noopener">WhatsApp Support</a>
         <!-- Admin panel: /admin -->
-        <p class="footer-note">00 dc advance</p>
+        <p class="footer-note">500 dc advance</p>
       </div>
     </div>
     <div class="container footer-bottom">
@@ -224,7 +224,7 @@
     <div class="cart-body" id="cartItems"></div>
     <div class="cart-footer">
       <div class="cart-total-row"><span>Subtotal</span><strong id="cartSubtotal">PKR 0</strong></div>
-      <p class="cart-note">00 dc advance across Pakistan.</p>
+      <p class="cart-note">500 dc advance across Pakistan.</p>
       <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
     </div>
   </aside>
@@ -275,7 +275,13 @@
       <div id="adminAuth" class="admin-auth">
         <p class="admin-note">Enter PIN to manage products. <small>(Client-side UI protection only; not server authentication.)</small></p>
         <div class="admin-pin-row">
-          <input type="password" id="adminPinInput" placeholder="Admin PIN" aria-label="Admin PIN">
+          <div class="admin-pin-field">
+            <input type="password" id="adminPinInput" placeholder="Admin PIN" aria-label="Admin PIN">
+            <button type="button" class="admin-eye-btn" id="adminPinToggle" aria-label="Show password" aria-pressed="false">
+              <svg class="eye-show" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              <svg class="eye-hide hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20C5 20 1 12 1 12a21.86 21.86 0 0 1 5.06-6.06"></path><path d="M9.9 4.24A10.54 10.54 0 0 1 12 4c7 0 11 8 11 8a21.83 21.83 0 0 1-2.16 3.19"></path><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+            </button>
+          </div>
           <button class="btn btn-primary" id="adminUnlockBtn" type="button">Unlock</button>
         </div>
         <p id="adminAuthMsg" class="field-error"></p>

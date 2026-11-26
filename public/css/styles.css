@@ -1013,8 +1013,13 @@ p, h1, h2, h3, h4, h5, h6 { margin: 0; }
 .admin-note { font-size: .88rem; color: var(--muted); margin-bottom: .75rem; line-height: 1.6; }
 .admin-note small { color: #888; }
 .admin-pin-row { display: flex; gap: .75rem; align-items: stretch; }
-.admin-pin-row input { flex: 1; padding: .8rem .9rem; border: 1px solid var(--line); border-radius: 10px; outline: none; }
-.admin-pin-row input:focus { border-color: rgba(179,138,69,.7); box-shadow: 0 0 0 3px rgba(179,138,69,.12); }
+.admin-pin-field { position: relative; flex: 1; }
+.admin-pin-field input { width: 100%; padding: .8rem 2.8rem .8rem .9rem; border: 1px solid var(--line); border-radius: 10px; outline: none; }
+.admin-pin-field input:focus { border-color: rgba(179,138,69,.7); box-shadow: 0 0 0 3px rgba(179,138,69,.12); }
+.admin-eye-btn { position: absolute; right: .45rem; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border: 0; background: transparent; color: #666; border-radius: 8px; display: grid; place-items: center; cursor: pointer; }
+.admin-eye-btn:hover { color: #111; background: rgba(0,0,0,.04); }
+.admin-eye-btn:focus-visible { outline: 2px solid rgba(179,138,69,.45); outline-offset: 1px; }
+.admin-eye-btn svg { width: 20px; height: 20px; display: block; }
 .admin-toolbar { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1rem; }
 .admin-list-section { margin-bottom: 1.25rem; }
 .admin-list-section h4, .admin-form h4 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: .75rem; color: #111; }
