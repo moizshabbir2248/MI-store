@@ -1,4 +1,4 @@
-﻿const STORE_WHATSAPP_NUMBER = "92337214265";
+const STORE_WHATSAPP_NUMBER = "92337214265";
 // Admin password/PIN for Admin Panel unlock and API requests (must match server ADMIN_PASSWORD/.env).
 // Client-side UI protection only; not secure server auth by itself.
 const ADMIN_PIN = "M Idrees 46 14";
